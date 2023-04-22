@@ -12,7 +12,11 @@ window.onload = function() {
 	var emailAddrHref = mailto + user + commat + domain + period + domainExt;
 
 	$('.safe-email').each(function() {
-		$(this).html(emailAddr);
+		$(this).append(emailAddr);
+		$(this).attr("href", emailAddrHref);
+	});
+
+	$('.safe-email-link-only').each(function() {
 		$(this).attr("href", emailAddrHref);
 	});
 	
@@ -26,7 +30,11 @@ window.onload = function() {
 	var phoneNumHref = tel + intcode + areacode + prefix + suffix;
 
 	$('.safe-phone').each(function() {
-		$(this).html(phoneNum);
+		$(this).append(phoneNum);
+		$(this).attr("href", phoneNumHref);
+	});
+
+	$('.safe-phone-link-only').each(function() {
 		$(this).attr("href", phoneNumHref);
 	});
 }
